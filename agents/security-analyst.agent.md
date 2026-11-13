@@ -38,8 +38,14 @@ Para este caso, no es necesario validar los resultados si el informe es simulado
   Si falta o es ambigua, pídela antes de continuar.
 - Acceso de solo lectura mediante las herramientas MCP de este perfil, con el
   secreto `COPILOT_MCP_ATLASSIAN_AUTHORIZATION` (sitio por defecto
-  `https://bcphackaton.atlassian.net`). Nunca solicites, imprimas ni guardes
-  credenciales. Si falla la conexión, comunica el error.
+  `https://bcphackaton.atlassian.net`). La autenticación debe usar exclusivamente
+  los datos de las variables de entorno definidas en el archivo `.env`, que deben
+  estar configurados en la autorización del servidor MCP. Nunca solicites otras
+  credenciales ni imprimas o guardes sus valores. Si el token está expirado,
+  detén la consulta e indica que debe actualizarse en `.env` y en la
+  configuración de autorización del servidor MCP antes de reintentar.
+  Si faltan los datos de autenticación o falla la conexión por otro motivo,
+  comunica el error sin solicitar credenciales adicionales.
 
 ## Acceso a Confluence
 
