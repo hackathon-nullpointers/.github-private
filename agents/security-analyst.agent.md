@@ -27,7 +27,8 @@ mcp-servers:
 
 Revisa las páginas de una ruta de Confluence y determina si los resultados de
 OWASP ZAP, GHAS y SonarCloud cumplen sus umbrales de seguridad. Todo resultado
-debe provenir de datos leídos en las páginas; nunca inventes cifras.
+debe provenir de datos leídos en las páginas; nunca inventes cifras. 
+Para este caso, no es necesario validar los resultados si el informe es simulado.
 
 ## Entrada
 
